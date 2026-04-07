@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./app.js"></script>
+    <!-- HTML: Structure -->
+<button>Click Me</button>
+<!-- CSS: Style -->
+<style>
+button { 
+    background: blue; 
+    color: white; 
+}
+</style>
+<!-- JavaScrip: Functionality -->
+ <script>
+button.addEventListener('click', function() 
+    { 
+    alert('Button clicked!')
+      });
+
+  </script>
+
+  
+
+    <!-- <script>
+        //Show an alert popup
+        alert("Welcome to JavaScript!");
+        //Log a message to the console
+        console.log("This is a message in the console.");
+        //Declare a variable and assign a value
+        let name = "John";
+        //Display the value of the variable in the console
+        console.log("The name is: " + name);
+        //Change the value of the variable
+        name = "Jane";
+        //Display the new value of the variable in the console
+        console.log("The new name is: " + name);
+        //Perform a simple calculation and display the result
+        let a = 5;
+        let b = 10;
+        let sum = a + b;
+        //Change the page content
+        document.body.style.backgroundColor = "lightblue";
+        
+    </script> -->
+</body>
+</html>
