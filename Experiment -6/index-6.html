@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation Experiment</title>
+</head>
+<style>
+    .container {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding: 20px;
+    }
+    #paragraph {
+        margin-top: 60px;
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <div class="container">
+    <h1 id="mainHeading">Welcome to JavaScript Lab</h1>
+
+    <input type="text" id="userInput" placeholder="Enter new heading text">
+    <br><br>
+
+    <button id="changeTextBtn">Change Heading</button>
+    <button id="bgColorBtn">Change Background</button>
+    <button id="fontSizeBtn">Increase Font Size</button>
+    <button id="toggleBtn">Show/Hide Paragraph</button>
+    <button id="resetBtn">Reset</button>
+
+    <p id="paragraph">
+        This is a sample paragraph. JavaScript events can dynamically change content.
+    </p>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
