@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>DOM Manipulation Experiment</title>
+  <title>Simple DOM Experiment</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <style>
     .container {
@@ -14,25 +15,36 @@
         margin-top: 60px;
         font-size: 30px;
     }
-</style>
+    #heading {
+        font-size: 50px;
+        color: #333;
+    }
+    #newHeading {
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 5px;
+        cursor: pointer;
+    }
 
+</style>
 <body>
     <div class="container">
-    <h1 id="mainHeading">Welcome to JavaScript Lab</h1>
+  <h1 id="heading">Welcome to JavaScript Lab</h1>
+  <input type="text" id="newHeading" placeholder="Enter new heading">
 
-    <input type="text" id="userInput" placeholder="Enter new heading text">
-    <br><br>
+  <button onclick="changeHeading()">Change Heading</button>
+  <button onclick="changeBackground()">Change Background</button>
+  <button onclick="increaseFont()">Increase Font Size</button>
+  <button onclick="toggleParagraph()">Show/Hide Paragraph</button>
+  <button onclick="resetPage()">Reset</button>
 
-    <button id="changeTextBtn">Change Heading</button>
-    <button id="bgColorBtn">Change Background</button>
-    <button id="fontSizeBtn">Increase Font Size</button>
-    <button id="toggleBtn">Show/Hide Paragraph</button>
-    <button id="resetBtn">Reset</button>
-
-    <p id="paragraph">
-        This is a sample paragraph. JavaScript events can dynamically change content.
-    </p>
+  <p id="paragraph">This is a sample paragraph. JavaScript events can dynamically change content.</p>
 </div>
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
