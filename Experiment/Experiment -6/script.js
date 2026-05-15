@@ -1,45 +1,31 @@
-// Selecting elements
-let heading = document.getElementById("heading");
-let input = document.getElementById("inputText");
-let para = document.getElementById("para");
-// Buttons
-let changeTextBtn = document.getElementById("changeTextBtn");
-let colorBtn = document.getElementById("colorBtn");
-let fontBtn = document.getElementById("fontBtn");
-let toggleBtn = document.getElementById("toggleBtn");
-let resetBtn = document.getElementById("resetBtn");
-// 1. Change Heading Text (onclick)
-changeTextBtn.onclick = function() {
-    heading.innerText = input.value;
-};
-// 2. Change Background Color (addEventListener)
-colorBtn.addEventListener("click", function() {
-    document.body.style.backgroundColor = "lightblue";
-});
-// 3. Change Font Size (onmouseover)
-fontBtn.onmouseover = function() {
-    heading.style.fontSize = "60px";
-};
-// 4. Show/Hide Paragraph
-let isVisible = true;
-toggleBtn.addEventListener("click", function() {
-    if (isVisible) {
-        para.style.display = "none";
-        isVisible = false;
-    } else {
-        para.style.display = "block";
-        isVisible = true;
+function changeHeading() {
+    let text = document.getElementById("newHeading").value;
+    if (text) {
+        document.getElementById("heading").textContent = text;
     }
-});
-// 5. Input Change Event (onchange)
-input.onchange = function() {
-    console.log("Input changed to: " + input.value);
-};
-// 6. Reset Page
-resetBtn.addEventListener("click", function() {
-    heading.innerText = "Welcome to JavaScript DOM";
+}
+
+function changeBackground() {
+    const randomNum = Math.floor(Math.random() * 16777215);
+    const hexColor = "#" + randomNum.toString(16).padStart(6, "0");
+    document.body.style.backgroundColor = hexColor;
+}
+
+function increaseFont() {
+    let para = document.getElementById("paragraph");
+    let size = parseInt(window.getComputedStyle(para).fontSize);
+    para.style.fontSize = (size + 2) + "px";
+}
+
+function toggleParagraph() {
+    let para = document.getElementById("paragraph");
+    para.style.display = (para.style.display === "none") ? "block" : "none";
+}
+
+function resetPage() {
+    document.getElementById("heading").textContent = "Welcome to JavaScript Lab";
     document.body.style.backgroundColor = "white";
-    heading.style.fontSize = "24px";
-    para.style.display = "block";
-    input.value = "";
-});
+    document.getElementById("paragraph").style.fontSize = "16px";
+    document.getElementById("paragraph").style.display = "block";
+    document.getElementById("newHeading").value = "";
+}
