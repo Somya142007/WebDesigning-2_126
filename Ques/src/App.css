@@ -1,0 +1,61 @@
+
+.container {
+  min-height: 100vh;
+  padding: 40px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  color: red; /* Dark maroon color */
+  margin-bottom: 40px;
+}
+
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.product-card {
+  width: 300px;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid;
+  text-align: left;
+}
+
+.product-card h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.product-card p {
+  margin: 5px 0;
+  color: white;
+}
+
+
+.blue {
+  background-color: lightblue;
+  border-color: darkblue;
+  color: darkblue; 
+}
+
+.green {
+  background-color: lightgreen;
+  border-color: darkgreen;
+  color: darkgreen; 
+}
+
+.red {
+  background-color: lightpink;
+  border-color: darkred;
+  color: darkorchid; 
+}
